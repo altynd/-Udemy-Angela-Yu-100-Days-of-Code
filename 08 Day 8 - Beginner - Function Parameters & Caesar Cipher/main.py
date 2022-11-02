@@ -1,16 +1,33 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+alphabet = ["q","w","e","r","t","y","u","i","o",
+            "p","a","s","d","f","g","h","j","k",
+            "l","z","x","c","v","b","n","m",
+            "q","w","e","r","t","y","u","i","o",
+            "p","a","s","d","f","g","h","j","k",
+            "l","z","x","c","v","b","n","m"]
 
+char_time =""
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+while True:
+    new_message = ""
+    message = input("Type your message")
+    code = input("decode or encode")
+    key = int(input("Type key"))
+    char_time = ""
+    if code == "encode":
+        for char in message:
+            for char_alpha in range(len(alphabet)):
+                if char == alphabet[char_alpha] and char != char_time:
+                    char_time = char
+                    new_char = alphabet[char_alpha+key]
+                    new_message += new_char
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    if code == "decode":
+        for char in message:
+            for char_alpha in range(len(alphabet)):
+                if char == alphabet[char_alpha] and char != char_time:
+                    char_time = char
+                    new_char = alphabet[char_alpha-key]
+                    new_message += new_char
+    print(new_message)
