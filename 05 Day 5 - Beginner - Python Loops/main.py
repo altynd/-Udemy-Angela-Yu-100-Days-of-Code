@@ -51,18 +51,18 @@ symbols_data = ["!", "@", "#", "$", "%", "^"]
 
 password=[]
 
-for i in range(0,letters):
+for i in range(letters):
     letter_random = random.choice(letters_data)
     rand_cap = random.randint(0,1)
     if rand_cap == 1:
         letter_random = letter_random.title()
     password.append(letter_random)
 
-for i in range(0,symbols):
+for i in range(symbols):
     symbol_random = random.choice(symbols_data)
     password.append(symbol_random)
 
-for i in range(0,numbers):
+for i in range(numbers):
     number_random = random.randint(0,9)
     password.append(str(number_random))
 
