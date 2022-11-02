@@ -1,3 +1,19 @@
+#
+# def prime_cheker(number):
+#     n=0
+#     for i in range(2, number):
+#         if number % i  ==0:
+#             n=n+1
+#     if n==0:
+#         print("it is a prime number")
+#     else:
+#         print("it is not a prime number")
+#
+#
+# n = int(input("Chek this number:"))
+# prime_cheker(number=n)
+
+
 
 
 alphabet = ["q","w","e","r","t","y","u","i","o",
