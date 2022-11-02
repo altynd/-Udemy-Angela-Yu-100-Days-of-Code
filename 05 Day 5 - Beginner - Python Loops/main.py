@@ -1,15 +1,4 @@
-# import random
-#
-# print("Welcome to the PyPassword Generator")
-# letters = int(input("How many letters would you like in your password?"))
-# symbols = int(input("How many symbols would you like?"))
-# numbers = int(input("How many numbers would you like?"))
-#
-# letters_data = ["a","b","c","d","e","f","g"]
-# symbols_data = ["!", "@", "#", "$", "%", "^"]
-#
-# password=[]
-#
+
 
 
 
@@ -50,6 +39,17 @@
 #     else:
 #         print(i)
 
+import random
+
+print("Welcome to the PyPassword Generator")
+letters = int(input("How many letters would you like in your password?"))
+symbols = int(input("How many symbols would you like?"))
+numbers = int(input("How many numbers would you like?"))
+
+letters_data = ["a","b","c","d","e","f","g"]
+symbols_data = ["!", "@", "#", "$", "%", "^"]
+
+password=[]
 
 for i in range(0,letters):
     letter_random = random.choice(letters_data)
