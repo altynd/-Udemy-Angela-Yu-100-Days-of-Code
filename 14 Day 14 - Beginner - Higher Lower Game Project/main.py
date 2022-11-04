@@ -1,16 +1,62 @@
-# This is a sample Python script.
+from data import data
+import random
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+work_data = data
+points = 0
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+print("Higher lower game")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def choose_data():
+    global work_data
+    global game_continue
+    """Pick random item in dict data and removes it  from dict"""
+    dict = random.choice(work_data)
+    work_data.remove(dict)
+    return dict
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+def print_result(dict, index):
+    """Prin question from data dict"""
+    print(f"Compare {index}: {dict['name']}, {dict['description']}, from {dict['country']}")
+
+
+def compare(what_chhose):
+    global dict_a
+    global dict_b
+    global points
+    global game_continue
+    if what_chhose == "A":
+        if dict_a["follower_count"] > dict_b["follower_count"]:
+            points += 1
+            print(f"You are right!, You have a {points} points")
+        else:
+            print(f"You are  wrong, Game Over. You have a {points} points")
+            game_continue = False
+    else:
+        if dict_a["follower_count"] < dict_b["follower_count"]:
+            points += 1
+            print(f"You are right!, You have a {points} points")
+        else:
+            print(f"You are  wrong, Game Over. You have a {points} points")
+            game_continue = False
+    dict_a = dict_b
+    dict_b = choose_data()
+
+
+dict_a = choose_data()
+dict_b = choose_data()
+game_continue = True
+while game_continue:
+    print("_______NEW GAME___________")
+    print_result(dict_a, "A")
+    print(f"VS")
+    print_result(dict_b, "B")
+
+    answer = input("Who has more followers? Type 'A' or 'B':")
+
+    if answer == "A" or answer == "a":
+        compare("A")
+
+    elif answer == "B" or answer == "b":
+        compare("B")
