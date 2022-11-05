@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from menu import MENU
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
+def report():
+    print(
+    "Water: 300 ml\n" 
+    "Milk: 200ml\n" 
+    "Coffee: 100g\n" 
+    "Money: $0"
+    )
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+while True:
+    coffee_choose = input("What would you like? (espresso/latte/cappuccino): ")
+    if coffee_choose == "report":
+        report()
