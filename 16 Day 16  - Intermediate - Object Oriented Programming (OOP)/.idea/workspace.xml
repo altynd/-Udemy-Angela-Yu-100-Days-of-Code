@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e906480-19e4-4a5c-b63c-af8cc9069416" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../15 Day 15 - Intermediate - Local Development Environment Setup &amp; the Coffee Machine/menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15 Day 15 - Intermediate - Local Development Environment Setup &amp; the Coffee Machine/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../15 Day 15 - Intermediate - Local Development Environment Setup &amp; the Coffee Machine/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coffee_maker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/money_machine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="16 Day 16  - Intermediate - Object Oriented Programming (OOP)" />
