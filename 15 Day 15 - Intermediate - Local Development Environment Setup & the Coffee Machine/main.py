@@ -31,7 +31,8 @@ def making(coffee_chosen):
             #TODO-6
             if money > coffee_price and enouth_resources:
                 resources["money"] = resources["money"] + coffee_price
-                change = money - coffee_price
+                change = round((money - coffee_price),2)
+
                 print(f"Here is ${change} in change")
                 #TODO-7
                 for ingredient in coffee_ingredients:
