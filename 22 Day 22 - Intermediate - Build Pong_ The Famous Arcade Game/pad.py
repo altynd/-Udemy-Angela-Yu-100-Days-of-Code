@@ -18,10 +18,8 @@ class Pad(Turtle):
 
     def up(self):
         self.goto(self.xcor(), self.ycor()+20)
-        pass
 
 
     def down(self):
         self.goto(self.xcor(), self.ycor()-20)
-        pass
 
