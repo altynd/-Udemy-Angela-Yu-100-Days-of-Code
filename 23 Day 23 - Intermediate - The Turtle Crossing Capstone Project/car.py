@@ -15,7 +15,7 @@ class Car(Turtle):
         self.goto(300,random.choice(self.positions))
         self.penup()
         self.clear()#??
-        self.speed = random.randint(10,30)
+        self.speed = random.randint(2,10)
 
     def random_positions(self):
         for position in range(-240,280,20):
