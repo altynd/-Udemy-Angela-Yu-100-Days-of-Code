@@ -40,19 +40,22 @@ screen.onkey(pad_1.down, "s")
 screen.onkey(pad_2.up, "Up")
 screen.onkey(pad_2.down, "Down")
 
+# speed = 0.03
 game_is_on = True
 while game_is_on:
 
     screen.update()
-    # time.sleep(0.2)
+    # time.sleep(speed)
     ball.move()
 
     #TODO 7 DONE
     # Detect collision ball with pad
-    if ball.xcor() == pad_1.xcor()+20 and ball.ycor()> pad_1.ycor()-40 and ball.ycor()<pad_1.ycor()+40:
+    if ball.xcor() == pad_1.xcor()+20 and ball.ycor()> pad_1.ycor()-150 and ball.ycor()<pad_1.ycor()+100:
         ball.direction_x *= -1
-    elif ball.xcor() == pad_2.xcor()-20 and ball.ycor()> pad_2.ycor()-40 and ball.ycor()<pad_2.ycor()+40:
+        # speed=speed*0.9
+    elif ball.xcor() == pad_2.xcor()-20 and ball.ycor()> pad_2.ycor()-150 and ball.ycor()<pad_2.ycor()+100:
         ball.direction_x *= -1
+        # speed=speed*0.9
 
 
     #TODO 3 DONE

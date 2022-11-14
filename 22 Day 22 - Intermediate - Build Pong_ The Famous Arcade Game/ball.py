@@ -18,8 +18,8 @@ class Ball(Turtle):
 
     def move(self):
         """ball moving on diagonale"""
-        new_position_x = self.xcor() + 1 * self.direction_x
-        new_position_y = self.ycor() + 1 * self.direction_y
+        new_position_x = self.xcor() + 10 * self.direction_x
+        new_position_y = self.ycor() + 10 * self.direction_y
         self.goto(new_position_x, new_position_y)
 
 

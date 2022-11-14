@@ -10,16 +10,16 @@ class Pad(Turtle):
         self.shape("square")
         self.color("white")
         self.speed("fastest")
-        self.turtlesize(4,1)
+        self.turtlesize(15,1)
         self.goto(position)
         self.penup()
         self.clear()
 
 
     def up(self):
-        self.goto(self.xcor(), self.ycor()+20)
+        self.goto(self.xcor(), self.ycor()+40)
 
 
     def down(self):
-        self.goto(self.xcor(), self.ycor()-20)
+        self.goto(self.xcor(), self.ycor()-40)
 
