@@ -1,16 +1,57 @@
-# This is a sample Python script.
+from flask import Flask
+from flask import render_template
+import random
+import this
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+app = Flask(__name__)
+app.app_context().push()  # for fast updates
+
+answer_number = random.randint(1,9)
+print(answer_number)
+
+def make_bold(function):
+    def inner():
+        return f"<b>{function()}</b>"
+    return inner
+
+def make_emfes(function):
+    def inner():
+        return f"<em>{function()}</em>"
+    return inner
+
+def make_under(func):
+    def inner():
+        return f"<u>{func()}</u>"
+    return inner
+
+def decorate(func):
+    def inner():
+        return f"{func()}"
+    return inner
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+@app.route("/bye")
+@make_bold
+@make_emfes
+@make_under
+def bye():
+    return "Byu!"
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+@app.route("/")
+def index():
+    return "hello World"
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+@app.route("/<int:number>")
+def guess(number):
+    if number == answer_number:
+        return render_template("/right.html")
+    elif number>answer_number:
+        return render_template("/high.html")
+    else:
+        return render_template("/low.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)  # automatic starting app
+
