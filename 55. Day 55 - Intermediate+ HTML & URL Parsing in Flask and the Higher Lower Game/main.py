@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import render_template
 import random
-import this
 
 app = Flask(__name__)
 app.app_context().push()  # for fast updates
